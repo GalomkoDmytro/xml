@@ -2,19 +2,19 @@ TXML
 Example:
 <catalog>
 	<notebook>
-		<person id=”1”>
+		<person id=вЂќ1вЂќ>
 			<name>John</name>
 			<address>sadasdas</address>
 			<cash>99999</cash>
 			<education>sa</education>
 		</person>
-		<person id=”2”>>
+		<person id=вЂќ2вЂќ>>
 			<name>AAaa</name>
 			<address>sadasdas</address>
 			<cash>99999</cash>
 			<education>sa</education>
 		</person>
-		<person id=”3”>>
+		<person id=вЂќ3вЂќ>>
 			<name>Bbb</name>
 			<address>sadasdas</address>
 			<cash>2222</cash>
@@ -23,7 +23,8 @@ Example:
 	</notebook>
 </catalog>
 
-Создать XML документ при помощи Java, добавить 2+ персона
-При помощи 2-х на выбор парсеров распарсить XML док. По полям <name> <address> <cash>
-Записать в Коллекцию
-Вывести в файл и консоль людей, у которых кэш >= 10000$
+РЎРѕР·РґР°С‚СЊ XML РґРѕРєСѓРјРµРЅС‚ РїСЂРё РїРѕРјРѕС‰Рё Java, РґРѕР±Р°РІРёС‚СЊ 2+ РїРµСЂСЃРѕРЅР°
+РџСЂРё РїРѕРјРѕС‰Рё 2-С… РЅР° РІС‹Р±РѕСЂ РїР°СЂСЃРµСЂРѕРІ СЂР°СЃРїР°СЂСЃРёС‚СЊ XML РґРѕРє. РџРѕ РїРѕР»СЏРј <name> <address> <cash>
+Р—Р°РїРёСЃР°С‚СЊ РІ РљРѕР»Р»РµРєС†РёСЋ
+Р’С‹РІРµСЃС‚Рё РІ С„Р°Р№Р» Рё РєРѕРЅСЃРѕР»СЊ Р»СЋРґРµР№, Сѓ РєРѕС‚РѕСЂС‹С… РєСЌС€ >= 10000$
+
