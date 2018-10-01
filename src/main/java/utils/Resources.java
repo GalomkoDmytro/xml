@@ -10,5 +10,6 @@ public class Resources {
     public static final String EDUCATION = "education";
     public static final String PERSON = "person";
     public static final String ID = "id";
-    public static final int CASH_TAG = 10_000;
+    public static final Integer CASH_TAG = 10_000;
+
 }

@@ -2,6 +2,7 @@ import createXml.XMLFactory;
 import pars.DOM;
 import pars.JDOM;
 import pars.MyParser;
+import utils.Resources;
 
 /**
  * @author Dmytro_Galomko
@@ -24,10 +25,12 @@ public class App {
 
         // pars with JDOM
         MyParser jdom = new JDOM();
-        jdom.pars();
+        jdom.pars(Resources.FILE);
+        jdom.checkCashAndSave(Resources.CASH_TAG, "DOM.txt");
 
         // pars with DOM
         MyParser dom = new DOM();
-        dom.pars();
+        dom.pars(Resources.FILE);
+        dom.checkCashAndSave(Resources.CASH_TAG, "JDOM.txt");
     }
 }

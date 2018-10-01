@@ -9,17 +9,17 @@ import java.io.File;
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
 
-public class DOMTest {
+public class JDOMTest {
 
     private static final String FILE = "myXmlTest.txt";
-    private static final String FILE_TO_SAVE_CASH = "domTest.txt";
+    private static final String FILE_TO_SAVE_CASH = "jdomTest.txt";
 
     @Test
     public void pars() {
 
-        MyParser dom = new DOM();
-        dom.pars(FILE);
-        dom.checkCashAndSave(Resources.CASH_TAG, FILE_TO_SAVE_CASH);
+        MyParser jdom = new JDOM();
+        jdom.pars(FILE);
+        jdom.checkCashAndSave(Resources.CASH_TAG, FILE_TO_SAVE_CASH);
 
         File file = new File(FILE_TO_SAVE_CASH);
         assertTrue(file.exists() && !file.isDirectory());
@@ -32,7 +32,6 @@ public class DOMTest {
 
         assertEquals(actual.trim(), expected.trim());
 
-
         deleteCreatedFile(FILE_TO_SAVE_CASH);
     }
 
@@ -40,5 +39,4 @@ public class DOMTest {
         File file = new File(fileName);
         file.delete();
     }
-
 }

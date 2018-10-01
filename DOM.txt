@@ -1,0 +1,16 @@
+Person{name='Smit', address='adr2', cash=50000}
+Person{name='Aron', address='adr3', cash=15500}
+Person{name='Smit', address='adr2', cash=50000}
+Person{name='Aron', address='adr3', cash=15500}
+Person{name='Smit', address='adr2', cash=50000}
+Person{name='Aron', address='adr3', cash=15500}
+Person{name='Smit', address='adr2', cash=50000}
+Person{name='Aron', address='adr3', cash=15500}
+JDOM.txt
+JDOM.txt
+domTest.txt
+domTest.txt
+Person{name='Smit', address='adr2', cash=50000}
+Person{name='Aron', address='adr3', cash=15500}
+Person{name='Smit', address='adr2', cash=50000}
+Person{name='Aron', address='adr3', cash=15500}

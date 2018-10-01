@@ -23,9 +23,9 @@ public class JDOM extends MyParser {
      * Parsing XML file with JDOM
      * File to parsing set in Resources.class
      */
-    public void pars() {
+    public void pars(String fileName) {
         try {
-            File inputFile = new File(Resources.FILE);
+            File inputFile = new File(fileName);
             SAXBuilder saxBuilder = new SAXBuilder();
             Document document = saxBuilder.build(inputFile);
             Element rootElement = document.getRootElement();
@@ -37,10 +37,6 @@ public class JDOM extends MyParser {
 
                 Element elPerson = personElementList.get(i);
                 fillPerson(person, elPerson);
-
-                if(isLookingCashAmount(person)) {
-                    saveToFile(person);
-                }
 
                 // add to Collection
                 personList.add(person);
@@ -57,10 +53,6 @@ public class JDOM extends MyParser {
         shortPerson.setName(elPerson.getChild(Resources.NAME).getText());
         shortPerson.setAddress(elPerson.getChild(Resources.ADDRESS).getText());
         shortPerson.setCash(Integer.valueOf(elPerson.getChild(Resources.CASH).getText()));
-    }
-
-    protected void saveToFile(Object person) {
-        fWriter.writeToFile("JDOM.txt", person.toString(), true);
     }
 
 }

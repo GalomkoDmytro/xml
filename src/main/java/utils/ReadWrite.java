@@ -50,18 +50,29 @@ public class ReadWrite {
     public String readFromFile(String fileName) {
         StringBuilder stringBuilder = new StringBuilder();
         FileReader fileReader = null;
+        BufferedReader br = null;
         try {
             File file = new File(fileName);
             fileReader = new FileReader(file);
-            BufferedReader br = new BufferedReader(fileReader);
+            br = new BufferedReader(fileReader);
 
             String st;
             while ((st = br.readLine()) != null) {
                 stringBuilder.append(st);
             }
+
         } catch (Exception ex) {
             ex.printStackTrace();
         } finally {
+
+            if(br != null) {
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
             if(fileReader != null) {
                 try {
                     fileReader.close();

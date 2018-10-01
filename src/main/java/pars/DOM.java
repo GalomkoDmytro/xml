@@ -23,9 +23,9 @@ public class DOM extends MyParser {
      * Parsing XML file with DOM.
      * File to parsing set in Resources.class
      */
-    public void pars() {
+    public void pars(String fileName) {
         try {
-            File inputFile = new File(Resources.FILE);
+            File inputFile = new File(fileName);
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.parse(inputFile);
@@ -51,10 +51,6 @@ public class DOM extends MyParser {
                             .item(0)
                             .getTextContent()));
 
-                    if(isLookingCashAmount(person)) {
-                        saveToFile(person);
-                    }
-
                     personList.add(person);
                 }
             }
@@ -62,10 +58,5 @@ public class DOM extends MyParser {
             ex.printStackTrace();
         }
     }
-
-    protected void saveToFile(Object person) {
-        fWriter.writeToFile("DOM.txt", person.toString(), true);
-    }
-
 
 }
