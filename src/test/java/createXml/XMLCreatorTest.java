@@ -7,7 +7,7 @@ import java.io.File;
 
 import static org.junit.Assert.*;
 
-public class XMLFactoryTest {
+public class XMLCreatorTest {
 
     /**
      * check if download and create xml file
@@ -15,11 +15,11 @@ public class XMLFactoryTest {
      */
     @Test
     public void createXMLFile() throws Exception{
-        XMLFactory xmlFactory = new XMLFactory();
+        XMLCreator xmlCreator = new XMLCreator();
         File file = new File(Resources.FILE);
 
-        xmlFactory.createXML();
-        xmlFactory.saveXML();
+        xmlCreator.createXML();
+        xmlCreator.saveXML();
 
         assertTrue(file.exists() && !file.isDirectory());
 

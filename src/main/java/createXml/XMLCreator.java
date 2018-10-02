@@ -19,11 +19,11 @@ import utils.Resources;
 /**
  * Create XML file
  */
-public class XMLFactory {
+public class XMLCreator {
 
     private Document doc;
 
-    public XMLFactory() {
+    public XMLCreator() {
     }
 
     public void createXML() throws Exception {

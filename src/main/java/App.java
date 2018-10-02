@@ -1,4 +1,4 @@
-import createXml.XMLFactory;
+import createXml.XMLCreator;
 import pars.DOM;
 import pars.JDOM;
 import pars.MyParser;
@@ -15,10 +15,10 @@ public class App {
 
     public App() {
         // create xml file
-        XMLFactory xmlFactory = new XMLFactory();
+        XMLCreator xmlCreator = new XMLCreator();
         try {
-            xmlFactory.createXML();
-            xmlFactory.saveXML();
+            xmlCreator.createXML();
+            xmlCreator.saveXML();
         } catch (Exception ex) {
             ex.printStackTrace();
         }
